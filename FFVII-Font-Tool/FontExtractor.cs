@@ -224,11 +224,16 @@ namespace FFVII_Font_Tool
                         if (temp >= 0)
                         {
                             glyphs.Add(newGlyphs[temp]);
+                            newGlyphs.RemoveAt(temp);
                         }
                         else
                         {
                             glyphs.Add(glyph);
                         }
+                    }
+                    foreach (var glyph in newGlyphs)
+                    {
+                        glyphs.Add(glyph);
                     }
 
                 }
